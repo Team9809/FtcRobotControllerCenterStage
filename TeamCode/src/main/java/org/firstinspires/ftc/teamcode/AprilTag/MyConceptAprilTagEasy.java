@@ -58,6 +58,7 @@ public class MyConceptAprilTagEasy extends LinearOpMode {
 
     /**
      * {@link #aprilTag} is the variable to store our instance of the AprilTag processor.
+     *  further defined in the initAprilTag method below
      */
     private AprilTagProcessor aprilTag;
 

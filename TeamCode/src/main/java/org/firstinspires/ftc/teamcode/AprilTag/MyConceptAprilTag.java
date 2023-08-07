@@ -37,6 +37,7 @@ import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDir
 import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
+import org.firstinspires.ftc.vision.apriltag.AprilTagGameDatabase;
 import org.firstinspires.ftc.vision.apriltag.AprilTagProcessor;
 
 import java.util.List;
@@ -107,8 +108,8 @@ public class MyConceptAprilTag extends LinearOpMode {
 
         // Create the AprilTag processor.
         aprilTag = new AprilTagProcessor.Builder()
-            //.setDrawAxes(false)
-            //.setDrawCubeProjection(false)
+            .setDrawAxes(true)          //defaults to false
+            .setDrawCubeProjection(false)
             //.setDrawTagOutline(true)
             //.setTagFamily(AprilTagProcessor.TagFamily.TAG_36h11)
             //.setTagLibrary(AprilTagGameDatabase.getCenterStageTagLibrary())
@@ -137,7 +138,7 @@ public class MyConceptAprilTag extends LinearOpMode {
         //builder.setCameraResolution(new Size(640, 480));
 
         // Enable the RC preview (LiveView).  Set "false" to omit camera monitoring.
-        //builder.enableCameraMonitoring(true);
+        builder.enableCameraMonitoring(true);
 
         // Set the stream format; MJPEG uses less bandwidth than default YUY2.
         //builder.setStreamFormat(VisionPortal.StreamFormat.YUY2);
